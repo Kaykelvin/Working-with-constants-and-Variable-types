@@ -1,16 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-const double USD_TO_UGX = 3500; //Constant exchange rate //Global variable
+
+const double Tax_Rate = 0.20; //Global variable
 
 int main() {
-    double USD_Amount = 700.0;  // Local variable
-    double UGXNeeded = USD_Amount * USD_TO_UGX;
+    double price = 100000;  // Local variable
+    double totalCost = price + (Tax_Rate * price);
 
-    printf("Currency Exchange Calculation:\n");
-    printf("Exchange Rate: %.2lf UGX/USD\n", USD_TO_UGX);
-    printf("USD Needed: %.2lf\n", USD_Amount);
-    printf("UGX Required: %.2lf UGX\n", UGXNeeded);
+    printf("Total Cost with Tax:\n");
+    printf("Price: %.2lf UGX\n", price);
+    printf("Tax Rate: %.2lf%%\n", Tax_Rate * 100);
+    printf("Total Cost: %.2lf UGX\n", totalCost);
 
     return 0;
 }
